@@ -7,11 +7,18 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "codegen": "apollo service:dowload --endpoint=https://api.github.com/graphql && apollo client:codegen src/types/graphql.ts --include='src/**/*.ts' --localSchemaFile=schema.json --outputFlat --target=typescript"
   },
   "dependencies": {
+    "@apollo/react-hooks": "^4.0.0",
+    "@playlyfe/gql": "^2.6.2",
+    "apollo": "^2.32.5",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.5.0",
     "react": "17.0.1",
-    "react-native": "0.64.0"
+    "react-native": "0.64.0",
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
